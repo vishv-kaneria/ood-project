@@ -7,17 +7,17 @@ def defaultView(request):
 
 
 def getProduct(request):
-    response = requests.get("http://127.0.0.1:8000/products/sprin")
+    response = requests.get("https://ood-project-api-6452e2a331a7.herokuapp.com/products/sprin")
     return JsonResponse(response.json(), safe=False)
 
 
 def getUser(request):
-    response = requests.get("http://127.0.0.1:8000/users/kaneri")
+    response = requests.get("https://ood-project-api-6452e2a331a7.herokuapp.com/users/kaneri")
     return JsonResponse(response.json(), safe=False)
 
 
 def getPharma(request):
-    response = requests.get("http://127.0.0.1:8000/pharamacist/micheal")
+    response = requests.get("https://ood-project-api-6452e2a331a7.herokuapp.com/pharamacist/micheal")
     return JsonResponse(response.json(), safe=False)
 
 

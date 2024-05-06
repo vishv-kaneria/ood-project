@@ -18,7 +18,7 @@ def add_products(request):
         payload = json.loads(json_data)
         print(json_data)
 
-        response = requests.post("http://127.0.0.1:8000/products/add", json=payload)
+        response = requests.post("https://ood-project-api-6452e2a331a7.herokuapp.com/products/add", json=payload)
         
         if response.status_code == 200:
             return HttpResponse("<h1>Success</h1>")

@@ -26,7 +26,7 @@ def payment(request):
         json_data = json.dumps(data)
         print(json_data)
 
-        response = requests.post("http://127.0.0.1:8000/paymentCheck/", data=json_data)
+        response = requests.post("https://ood-project-api-6452e2a331a7.herokuapp.com/paymentCheck/", data=json_data)
         print(response.status_code)
 
         if response.status_code == 200:

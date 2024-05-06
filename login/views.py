@@ -12,7 +12,7 @@ def login_view(request):
         email = request.POST.get('username')
         password = request.POST.get('password')
 
-        response = requests.get('http://127.0.0.1:8000/users/{}/'.format(email))
+        response = requests.get('https://ood-project-api-6452e2a331a7.herokuapp.com/users/{}/'.format(email))
         
         if response.status_code == 200:
             content = response.json()

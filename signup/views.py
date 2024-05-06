@@ -41,7 +41,7 @@ def signup(request):
             json_data = json.dumps(person_data)
             payload = json.loads(json_data)
 
-            response = requests.post("http://127.0.0.1:8000/users/add", json=payload)
+            response = requests.post("https://ood-project-api-6452e2a331a7.herokuapp.com/users/add", json=payload)
             
             if response.status_code == 200:
                 return redirect('/accounts/login/')
